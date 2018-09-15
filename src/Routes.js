@@ -9,6 +9,10 @@ import Children from './page/children';
 import Hoc from './page/hoc';
 import Panel from './page/panel';
 import Lifecycle from './page/lifecycle';
+import ContextPage from './page/context';
+//material UI section
+import MuiHome from './page/mui';
+
 //system pages
 import { page404 } from './page/error';
 
@@ -31,6 +35,12 @@ const routeDef = [
     { path:'/lifecycle', label:'Component lifecycle (class based)', component: Lifecycle, 
         props:{exact:true}
     },
+    { path:'/mui', label:'Material UI', component: MuiHome, 
+        props:{exact:false}
+    },
+    { path:'/context', label:'Context API', component: ContextPage, 
+        props:{exact:false}
+    },
     { path:null, label:'404', component: page404, 
         props:{}
     },
@@ -44,7 +54,7 @@ const writeRoutes = (routeDef) => {
     return routeDef.map((route)=>{
         return (
             
-            <Route exact
+            <Route
                 key={route.path}
                 path={route.path}  
                 component={ route.component }
