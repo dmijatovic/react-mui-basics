@@ -1,0 +1,9 @@
+
+.flex-panel-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-panel-cell{
+    flex:1;
+} 
